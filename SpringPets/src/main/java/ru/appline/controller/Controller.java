@@ -32,6 +32,7 @@ public class Controller
         return petModel.GetFromList(id.get("id"));
     }
 
+    @DeleteMapping(value = "/deletePet", consumes = "application/json", produces = "application/json")
     public String DeletePet(@RequestBody Map<String, Integer> id)
     {
         petModel.Delete(id.get("id"));
