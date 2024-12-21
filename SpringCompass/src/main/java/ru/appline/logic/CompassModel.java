@@ -1,9 +1,6 @@
 package ru.appline.logic;
 
 import com.google.gson.Gson;
-import org.junit.jupiter.api.parallel.Execution;
-
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
