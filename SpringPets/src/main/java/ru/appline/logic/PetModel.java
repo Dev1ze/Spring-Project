@@ -39,4 +39,9 @@ public class PetModel implements Serializable
     {
         model.remove(id);
     }
+
+    public void Update(Pet pet, int id)
+    {
+        model.put(id, pet);
+    }
 }

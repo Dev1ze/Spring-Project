@@ -38,4 +38,12 @@ public class Controller
         petModel.Delete(id.get("id"));
         return "Питомец успешно удален";
     }
+
+    @PutMapping(value = "/updatePet", consumes = "application/json", produces = "application/json")
+    public String UpdatePet(@RequestBody Map<String, Object> updatedPet)
+    {
+        Pet newPet = new Pet((String)updatedPet.get("name"), (String)updatedPet.get("type"), (Integer)updatedPet.get("age"));
+        petModel.Update(newPet, (Integer)updatedPet.get("id"));
+        return "Питомец обновлен";
+    }
 }
